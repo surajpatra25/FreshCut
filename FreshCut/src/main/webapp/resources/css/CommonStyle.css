@@ -1,0 +1,188 @@
+@charset "ISO-8859-1";
+body {
+   background-image: url("Haircut.jpg");
+       background-repeat: no-repeat;
+   background-color: #cccccc;
+   background-size: cover;
+    
+}
+#container{
+	display:block;
+}
+#homePage{
+	
+}
+#banner {
+	 
+    width:100%;
+    height:40%;
+    font-weight: bold;
+	position:fixed;
+	float: left;
+	transform: translate(0%, 0%); 
+}
+
+#header {
+	 font-size: 1.5em;
+	
+	  -webkit-margin-before: 0%;
+    -webkit-margin-after: 0%;
+    -webkit-margin-start: 0%;
+    -webkit-margin-end: 10%;
+    font-weight: bold;
+	position:fixed;
+	float: left;
+}
+#collapsedMenu {
+	width: 40%;
+	height:40%;
+	background-color:#A0A0A0;
+	~moz-border-radius: 1000px/500px;
+	~webkit-border-radius:1000px/500px;
+	border-radius: 100px/50px;
+	float: right;
+}
+#signIn{
+	display: none;
+	    font-size: 1.5em;
+    -webkit-margin-before: 5%;
+    -webkit-margin-after: 5%;
+    -webkit-margin-start: 10%;
+    -webkit-margin-end: 10%;
+    font-weight: bold;
+    float: right;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: hsl(0, 0%, 93%);
+    opacity: 0.6;
+    height: 80vh;
+    width: 50vw;
+}
+#signUp{
+	display: none;
+	    font-size: 1.5em;
+    -webkit-margin-before: 5%;
+    -webkit-margin-after: 5%;
+    -webkit-margin-start: 10%;
+    -webkit-margin-end: 10%;
+    font-weight: bold;
+    float: right;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: hsl(0, 0%, 93%);
+    opacity: 0.6;
+     height: 80vh;
+    width: 50vw;
+}
+#signUpIcon{
+	float:left;
+	font-size: 1.5em;
+    -webkit-margin-before: 5%;
+    -webkit-margin-after: 5%;
+    -webkit-margin-start: 10%;
+    -webkit-margin-end: 0%;
+    font-weight: bold;
+}
+#icons{
+	display:inline;
+}
+#signInIcon{
+	    font-size: 1.5em;
+    -webkit-margin-before: 5%;
+    -webkit-margin-after: 5%;
+    -webkit-margin-start: 10%;
+    -webkit-margin-end: 0%;
+    font-weight: bold;
+    float:left;
+}
+#MainMenuIcon{
+	   font-size: 1.5em;
+    -webkit-margin-before: 5%;
+    -webkit-margin-after: 5%;
+    -webkit-margin-start: 10%;
+    -webkit-margin-end: 0%;
+    font-weight: bold;
+	float:left;	
+}
+#OnlineCheckInIcon{
+	   font-size: 1.5em;
+    -webkit-margin-before: 5%;
+    -webkit-margin-after:  5%;
+    -webkit-margin-start: 10%;
+    -webkit-margin-end: 0%;
+    font-weight: bold;
+	float:left;
+}
+#OnlineCouponsIcon{
+	  font-size: 1.5em;
+    -webkit-margin-before: 5%;
+    -webkit-margin-after:  5%;
+    -webkit-margin-start: 10%;
+    -webkit-margin-end: 0%;
+    font-weight: bold;
+	float:left;
+}
+#onlineCheckInDiv{
+	
+		   font-size: 1.5em;
+   position: absolute;
+   bottom:0;
+   width: 40%;
+   height: 30%;
+    background-repeat: no-repeat;
+   background-color: #cccccc;
+  transform: translate(70%, 100%); 
+    font-weight: bold;
+    float:center;
+	
+}
+
+#onlineCouponsDiv{
+	
+		   font-size: 1.5em;
+   position: absolute;
+   bottom:0;
+   width: 40%;
+   height: 30%;
+    background-repeat: no-repeat;
+   background-color: #cccccc;
+  transform: translate(70%, 250%); 
+    font-weight: bold;
+    float:center;
+	
+}
+
+table {
+  align-self: center;
+}
+
+.coupon {
+    border: 5px dotted #bbb; /* Dotted border */
+    width: 80%; 
+    border-radius: 15px; /* Rounded border */
+    margin: 0 auto; /* Center the coupon */
+    max-width: 600px; 
+}
+
+.container {
+    padding: 2px 16px;
+    background-color: #f1f1f1;
+}
+
+.promo {
+    background: #ccc;
+    padding: 3px;
+}
+
+.expire {
+    color: red;
+}
+.coupons{
+	display:flex;
+}
