@@ -9,7 +9,14 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class HelloWorldController {
 	String msg = "Welcome to Spring MVC!";
+	@RequestMapping("/")
+	public ModelAndView homePage() {
+		System.out.println("in controller");
  
+		ModelAndView mv = new ModelAndView("index");
+		
+		return mv;
+	}
 	@RequestMapping("/hello")
 	public ModelAndView showMessage(
 			@RequestParam(value = "name", required = false, defaultValue = "World") String fName) {
@@ -20,4 +27,5 @@ public class HelloWorldController {
 		mv.addObject("name", fName);
 		return mv;
 	}
+	
 }
