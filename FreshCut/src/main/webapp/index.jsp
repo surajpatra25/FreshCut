@@ -204,7 +204,7 @@
 				<img src="hamburger.jpg" alt="Avatar" style="width: 100%;">
 				<div class="container" style="background-color: rgba(0, 0, 255, 0.1)" >
 					<h2>
-						<b>20% OFF YOUR PURCHASE</b>
+						<b>20% OFF YOUR PURCHAS</b>
 					</h2>
 					<p>Lorem ipsum..</p>
 				</div>
