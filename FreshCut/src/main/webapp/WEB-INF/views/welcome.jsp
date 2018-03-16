@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -42,6 +43,13 @@
 			$("#Menu").toggle();
 
 		});
+		
+		$("#AboutUsIcon").click(function() {
+			$("#signIn").hide();
+			$("#signUp").hide();
+			$("#AboutUsDiv").toggle(500);
+
+		});
 		$("div.headerMenu").click(function() {
 			
 				$(this).find(".subMenu").toggle();
@@ -64,7 +72,9 @@
 				</div>
 				<div id="collapsedMenu">
 					
-						
+						<div id="AboutUsIcon">
+								<a href="#AboutUsDiv"><i class="fab fa-adn"></i></a>
+							</div>
 						<div id="signUpIcon">
 							<label>Sign UP&nbsp; </label><i class="fas fa-user-plus"></i>
 						</div>
@@ -83,10 +93,30 @@
 							<div id="OnlineCouponsIcon">
 								<a href="#onlineCouponsDiv"><i class="fas fa-cut"></i></a>
 							</div>
-						<!-- </div>
-					 -->
+							
+							
+						<!-- </div> -->
 				</div>
-				
+	
+ 
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAP1MP4yZxlVgdeQZTlwgxyxlVS3zmkn90&callback=initMap">
+    </script>
+      
 				
 			</div> 
 			
@@ -97,6 +127,13 @@
 				<BR>
 				<label>A Rebellious Look Worth A Thousand Celebrations. Be Smart! Be Charming!</label>
 				</div>
+	<div id="AboutUsDiv">
+		<div >
+	<h1>KUNUKUNU</h1>
+			
+			
+		</div>		
+	</div>
 		<div id="signIn">
 		<form action="login">
 			<table>
@@ -169,7 +206,7 @@
 
 </div></div>
 
-	<div  id="SecondImage">
+	
 	<div id="onlineCheckInDiv">
 		<table>
 			<tbody>
@@ -201,6 +238,7 @@
 	</div>
 	<div id="onlineCouponsDiv">
 		<div class="coupons">
+		   <c:forEach var="coupon" items="${coupons}" varStatus="status">
 			<div class="coupon">
 				<div class="container">
 					<h3>Company Logo</h3>
@@ -219,66 +257,13 @@
 					<p class="expire">Expires: Jan 03, 2017</p>
 				</div>
 			</div>
-			<div class="coupon">
-				<div class="container">
-					<h3>Company Logo</h3>
-				</div>
-				<img src="hamburger.jpg" alt="Avatar" style="width: 100%;">
-				<div class="container" style="background-color: rgba(0, 0, 255, 0.1)">
-					<h2>
-						<b>20% OFF YOUR PURCHASE</b>
-					</h2>
-					<p>Lorem ipsum..</p>
-				</div>
-				<div class="container">
-					<p>
-						Use Promo Code: <span class="promo">BOH232</span>
-					</p>
-					<p class="expire">Expires: Jan 03, 2017</p>
-				</div>
+			</c:forEach>
 			</div>
-			<div class="coupon">
-				<div class="container">
-					<h3>Company Logo</h3>
-				</div>
-				<img src="hamburger.jpg" alt="Avatar" style="width: 100%;">
-				<div class="container" style="background-color: rgba(0, 0, 255, 0.1)">
-					<h2>
-						<b>20% OFF YOUR PURCHASE</b>
-					</h2>
-					<p>Lorem ipsum..</p>
-				</div>
-				<div class="container">
-					<p>
-						Use Promo Code: <span class="promo">BOH232</span>
-					</p>
-					<p class="expire">Expires: Jan 03, 2017</p>
-				</div>
-			</div>
-			<div class="coupon">
-				<div class="container">
-					<h3>Company Logo</h3>
-				</div>
-				<img src="hamburger.jpg" alt="Avatar" style="width: 100%;">
-				<div class="container" style="background-color: rgba(0, 0, 255, 0.1)">
-					<h2>
-						<b>20% OFF YOUR PURCHASE</b>
-					</h2>
-					<p>Lorem ipsum..</p>
-				</div>
-				<div class="container">
-					<p>
-						Use Promo Code: <span class="promo">BOH232</span>
-					</p>
-					<p class="expire">Expires: Jan 03, 2017</p>
-				</div>
-			</div>
-		
-	
-		</div>
 	</div>
+	
 
-</div>
+	
+
 
 
 </body>

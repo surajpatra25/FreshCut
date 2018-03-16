@@ -145,9 +145,25 @@ input {
 #signInIcon{
 	display:none;
 }
+
+#AboutUsIcon{
+	display:none;
+}
 }
 
 #signInIcon{
+	    font-size: 2vw;
+   -webkit-margin-before: 3%;
+    -webkit-margin-after: 2%;
+    -webkit-margin-start: 5%;
+    -webkit-margin-end: 0%;
+        color: #408080;
+    font-weight: bold;
+    float:left;
+   
+}
+
+#AboutUsIcon{
 	    font-size: 2vw;
    -webkit-margin-before: 3%;
     -webkit-margin-after: 2%;
@@ -265,6 +281,24 @@ input {
     -webkit-margin-after:  5%;
     -webkit-margin-start: 0%;
     -webkit-margin-end: 0%;
+	
+}
+
+
+#AboutUsDiv{
+	
+  font-size: 4vh;
+		   Font-style:Oblique;
+    position: absolute;
+   bottom:0; 
+   width: 70%;
+   height: 40%;
+    
+
+  transform: translate(150%, 500%); 
+    
+    float:right;
+   
 	
 }
 
