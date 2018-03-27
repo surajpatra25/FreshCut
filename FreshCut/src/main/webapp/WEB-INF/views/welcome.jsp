@@ -28,11 +28,11 @@
 			$("#signIn").hide();
 			$("#signUp").toggle(500);
 		});
-		$("#OnlineCheckInIcon").click(function() {
+		/* $("#OnlineCheckInIcon").click(function() {
 			$("#signIn").hide();
 			$("#signUp").hide();
 			$("#onlineCheckInDiv").toggle(500);
-		});
+		}); */
 		$(".closeButton").click(function() {
 			$("#signUp").hide();
 			$("#signIn").hide();
@@ -44,12 +44,7 @@
 
 		});
 		
-		$("#AboutUsIcon").click(function() {
-			$("#signIn").hide();
-			$("#signUp").hide();
-			$("#AboutUsDiv").toggle(500);
-
-		});
+		
 		$("div.headerMenu").click(function() {
 			
 				$(this).find(".subMenu").toggle();
@@ -59,82 +54,60 @@
 	});
 </script>
 </head>
-<body>
-<div id= "FirstImage">
-	<div id="container">
-		<div id="banner">
-			<div id="homePage">
-				<div id="header">
+<body>		
+			<div class="header">
+				<div class="heading">
 					<h2>Fresh Cut</h2>
-					<h3>
-						<a href="hello?name=Sunanda">Click Here</a>
-					</h3>
+					
 				</div>
 				<div id="collapsedMenu">
 					
 						<div id="AboutUsIcon">
+								<label>About US&nbsp;</label>
 								<a href="#AboutUsDiv"><i class="fab fa-adn"></i></a>
 							</div>
-						<div id="signUpIcon">
+						<div id="ServicesIcon">
+								<label>Services&nbsp;</label>
+								<a href="#Services"><i class="fab fa-adn"></i></a>
+							</div>
+						<!-- <div id="signUpIcon">
 							<label>Sign UP&nbsp; </label><i class="fas fa-user-plus"></i>
-						</div>
+						</div> -->
 						<div id="signInIcon">
 							<label>Sign IN&nbsp;</label><i class="fas fa-sign-in-alt"></i>
 						</div>
 						<div id="hiddenicon"><i class="fas fa-cog"></i>	</div>
 					<!-- 	<div id="staticicons" > -->
-							<div id="MainMenuIcon">
-								<i class="fas fa-bars"></i>
-							</div>
+							<!-- <div id="MainMenuIcon">
+								<label>Sign IN&nbsp;</label><i class="fas fa-bars"></i>
+							</div> -->
 							<div id="OnlineCheckInIcon">
-								<a href="#onlineCheckInDiv"><i class="fas fa-check-circle"></i></a>
+								<a href="#onlineCheckInDiv">
+									<label>Check IN&nbsp;</label>
+									<i class="fas fa-check-circle"></i>
+								</a>
 							</div>
 							
 							<div id="OnlineCouponsIcon">
-								<a href="#onlineCouponsDiv"><i class="fas fa-cut"></i></a>
+								<a href="#onlineCouponsDiv"><label>Promotions&nbsp;</label><i class="fas fa-cut"></i></a>
 							</div>
 							
 							
 						<!-- </div> -->
+						
 				</div>
-	
- 
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAP1MP4yZxlVgdeQZTlwgxyxlVS3zmkn90&callback=initMap">
-    </script>
-      
 				
-			</div> 
-			
-		</div>
-	<div id ="FrontPageText">
+			</div>
+			<div id ="FrontPageText">
 				<Label>FreshCut - A Look That Redifines The Idea Of Elegance With A Stroke Of Confidence</Label>
 				<BR>
 				<BR>
 				<label>A Rebellious Look Worth A Thousand Celebrations. Be Smart! Be Charming!</label>
 				</div>
-	<div id="AboutUsDiv">
-		<div >
-	<h1>KUNUKUNU</h1>
-			
-			
-		</div>		
-	</div>
-		<div id="signIn">
+			<div>
+ 					<span class="clear"></span>
+			</div>
+      		<div id="signIn">
 		<form action="login">
 			<table>
 				<tbody>
@@ -203,10 +176,10 @@
 			</table>
 			</form>
 		</div>
-
-</div></div>
-
 	
+
+
+
 	<div id="onlineCheckInDiv">
 		<table>
 			<tbody>
@@ -236,36 +209,44 @@
 			</tbody>
 		</table>
 	</div>
+
+
 	<div id="onlineCouponsDiv">
 		<div class="coupons">
-		   <c:forEach var="coupon" items="${coupons}" varStatus="status">
-			<div class="coupon">
-				<div class="container">
-					<h3>Company Logo</h3>
+			<c:forEach var="coupon" items="${coupons}" varStatus="status">
+				<div class="coupon">
+					<div class="container">
+						<h3>Company Logo</h3>
+					</div>
+					<img src="hamburger.jpg" alt="Avatar" style="width: 100%;">
+					<div class="container"
+						style="background-color: rgba(0, 0, 255, 0.1)">
+						<h2>
+							<b>${coupon.couponText}</b>
+						</h2>
+						<p>Lorem ipsum..</p>
+					</div>
+					<div class="container">
+						<p>
+							Use Promo Code: <span class="promo">BOH232</span>
+						</p>
+						<p class="expire">Expires: Jan 03, 2017</p>
+					</div>
 				</div>
-				<img src="hamburger.jpg" alt="Avatar" style="width: 100%;">
-				<div class="container" style="background-color: rgba(0, 0, 255, 0.1)" >
-					<h2>
-						<b>${coupon.couponText}</b>
-					</h2>
-					<p>Lorem ipsum..</p>
-				</div>
-				<div class="container">
-					<p>
-						Use Promo Code: <span class="promo">BOH232</span>
-					</p>
-					<p class="expire">Expires: Jan 03, 2017</p>
-				</div>
-			</div>
 			</c:forEach>
-			</div>
+		</div>
 	</div>
 	
+	<div id="AboutUsDiv">
+			<object
+			height = 400
+			width= 1000
+			
+			 data="https://www.youtube.com/v/tgbNymZ7vqY"> </object>	
+		</div>    
 
-	
-
-
-
+		
+		
 </body>
 
 </html>
