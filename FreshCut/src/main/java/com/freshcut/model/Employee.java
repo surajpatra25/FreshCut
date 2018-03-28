@@ -1,6 +1,5 @@
 package com.freshcut.model;
 
-import java.io.Serializable;
 import java.sql.Timestamp;
 
 import javax.persistence.Column;
@@ -11,32 +10,25 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="USER")
-public class User implements Serializable {
-	
-	/**
-	 * 
-	 */
+@Table(name="EMPLOYEE")
+public class Employee {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name = "USER_ID")
-	private Integer userId;
-	
-	@Column(name="USER_NAME")
-	private String userName;
+	@Column(name = "ID")
+	private Integer id;
 	
 	@Column(name="PASSWORD")
 	private String password;
 
-	@Column(name="USER_EMAIL")
-	private String userEmail;
+	@Column(name="EMPLOYEE_EMAIL")
+	private String employeeEmail;
 	
-	@Column(name="FIRST_NAME")
+	@Column(name="EMPLOYEE_FIRST_NAME")
 	private String firstName;
 	
-	@Column(name="LAST_NAME")
+	@Column(name="EMPLOYEE_LAST_NAME")
 	private String lastName;
 	
 	@Column(name="ACCOUNT_LOCKED")
@@ -48,39 +40,28 @@ public class User implements Serializable {
 	@Column(name="OPRTNL_FLAG")
 	private String operational;
 	
-	public String getEmployeeID() {
-		return employeeID;
-	}
-
-	public void setEmployeeID(String employeeID) {
-		this.employeeID = employeeID;
-	}
-
 	@Column(name="EMPLOYEE_ID")
 	private String employeeID;
 	
-	public String getOperational() {
-		return operational;
+	
+	@Column(name="CREATED_BY")
+	private String createdBy;
+	
+	@Column(name="CREATED_DATE")
+	private Timestamp createdDate;
+	
+	@Column(name="MODIFIED_BY")
+	private String modifiedBy;
+	
+	@Column(name="MODIFIED_DATE")
+	private Timestamp modifiedDate;
+
+	public Integer getId() {
+		return id;
 	}
 
-	public void setOperational(String operational) {
-		this.operational = operational;
-	}
-
-	public Integer getUserId() {
-		return userId;
-	}
-
-	public void setUserId(Integer userId) {
-		this.userId = userId;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getPassword() {
@@ -91,12 +72,12 @@ public class User implements Serializable {
 		this.password = password;
 	}
 
-	public String getUserEmail() {
-		return userEmail;
+	public String getEmployeeEmail() {
+		return employeeEmail;
 	}
 
-	public void setUserEmail(String userEmail) {
-		this.userEmail = userEmail;
+	public void setEmployeeEmail(String employeeEmail) {
+		this.employeeEmail = employeeEmail;
 	}
 
 	public String getFirstName() {
@@ -131,18 +112,22 @@ public class User implements Serializable {
 		this.resetPassword = resetPassword;
 	}
 
-	@Column(name="CREATED_BY")
-	private String createdBy;
-	
-	@Column(name="CREATED_DATE")
-	private Timestamp createdDate;
-	
-	@Column(name="MODIFIED_BY")
-	private String modifiedBy;
-	
-	@Column(name="MODIFIED_DATE")
-	private Timestamp modifiedDate;
-	
+	public String getOperational() {
+		return operational;
+	}
+
+	public void setOperational(String operational) {
+		this.operational = operational;
+	}
+
+	public String getEmployeeID() {
+		return employeeID;
+	}
+
+	public void setEmployeeID(String employeeID) {
+		this.employeeID = employeeID;
+	}
+
 	public String getCreatedBy() {
 		return createdBy;
 	}
@@ -173,6 +158,12 @@ public class User implements Serializable {
 
 	public void setModifiedDate(Timestamp modifiedDate) {
 		this.modifiedDate = modifiedDate;
-	}	
-}
+	}
 
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	
+
+
+}
