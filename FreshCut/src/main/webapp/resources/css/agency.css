@@ -50,7 +50,7 @@ section h3.section-subheading {
 
 @media (min-width: 768px) {
   section {
-    padding: 10px 0;/* 1px to 10px -to fill gap in AboutUS*/
+    padding: 1px 0;
     background-image: url(Background-2.jpg);
     background-repeat: no-repeat;
   

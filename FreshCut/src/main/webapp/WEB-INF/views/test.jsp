@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -255,8 +256,8 @@
               <img class="img-fluid" src="img/portfolio/01-thumbnail.jpg" alt="">
             </a>
             <div class="portfolio-caption">
-              <h4>Threads</h4>
-              <p class="text-muted">Illustration</p>
+              
+              
               <div class="coupons">
 			
 				<div class="coupon">
@@ -268,7 +269,7 @@
 						<h2>
 							<b>${coupon.couponText}</b>
 						</h2>
-						<p>Lorem ipsum..</p>
+						
 					</div>
 					<div class="container">
 						<p>
@@ -329,13 +330,14 @@
                 </div>
           
             </div>
-           
-             <div id="signIn">
-                        <h3 class="panel-title text-center">Return User Sign In</h3>
-                  
-               <div class="panel-body">
+            <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-center">Please Signin</h3>
+                    </div>
+                    <div class="panel-body">
                         <form role="form">
-                            <div class="form-group">
+                             <div class="form-group">
                                 <input type="text" name="user name" id="first_name" class="form-control input-sm" placeholder="user name">
                             </div>
 
@@ -353,13 +355,16 @@
 				</tbody>
 			</table>
                             </div>
+
+                           
                         </form>
-                    </div> 
-	
-		</div>  
-             
-             
-        </div>
+                    </div>
+                    
+                        
+                </div>
+          
+            </div>
+         </div>
         
          
     </div>
@@ -471,7 +476,7 @@
 			
 		</ul>
 <Div>
-		<button class="button-big" id="search"><div class="icon"></div>Check In</button>
+		<button class="button-big" id="search"><i class="fa fa-check"></i>Check In</button>
 		</Div>
 	</form>
 	</div>
