@@ -39,33 +39,5 @@ public class HelloWorldController {
 		mv.addObject("name", fName);
 		return mv;
 	}
-	@RequestMapping("/test")
-	public ModelAndView showTest(
-			@RequestParam(value = "name", required = false, defaultValue = "World") String fName) {
-		System.out.println("in controller");
- 
-		ModelAndView mv = new ModelAndView("test");
-		List<Coupons> coupons = new ArrayList<Coupons>();
-        coupons = welcomeService.getCoupons();
-	
-		mv.addObject("coupons", coupons);
-		mv.addObject("message", msg);
-		mv.addObject("name", fName);
-		return mv;
-	}
-	@RequestMapping("/survey")
-	public ModelAndView showSurvey(
-			@RequestParam(value = "name", required = false, defaultValue = "World") String fName) {
-		System.out.println("in controller");
- 
-		ModelAndView mv = new ModelAndView("survey");
-		List<Coupons> coupons = new ArrayList<Coupons>();
-        coupons = welcomeService.getCoupons();
-	
-		mv.addObject("coupons", coupons);
-		mv.addObject("message", msg);
-		mv.addObject("name", fName);
-		return mv;
-	}
 	
 }
