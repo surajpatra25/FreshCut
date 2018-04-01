@@ -15,7 +15,7 @@ body {
 	float:left;
 }
 .header {
-	/*font-size: 2em;*/
+	font-size: 2em;
     color: #408080;
     /* text-shadow: 1px 1px 2px #408080, 0 0 25px #008000, 0 0 5px #00ff80; */
    /*  -webkit-margin-before: 0%;
@@ -44,8 +44,8 @@ body {
 	float:right;
 	
 }
-/* #signUp,#signIn{
-	display: none;
+#signUp,#signIn{
+	/* display: none; */
 	font-size: 1.5em;
     -webkit-margin-before: 5%;
     -webkit-margin-after: 5%;
@@ -62,7 +62,7 @@ body {
     opacity: 0.9;
     height: 40vh;
     width: 50vw;
-} */
+}
  
 
 table {
@@ -117,7 +117,7 @@ input {
 }
 
 .container {
-   /*  padding: 2px 16px; */
+    padding: 2px 16px;
    /* // background-color: rgba(255, 0, 0, 0.4); */
   
        border-top-left-radius: 3vh;
@@ -175,7 +175,7 @@ input {
     position:relative;
     Padding: 50px;
     width:50%;
-    padding-left: 20%;
+    
  
 	
 }
@@ -210,9 +210,6 @@ span.clear {
 	display: none; }
 #container1 {
     background-color: #e2dada;
-    background-image: url(Background-3.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .centered-form {
@@ -228,14 +225,6 @@ span.clear {
 	padding: 0;
 	margin: 0;
 	outline: none;
-}
-
-#signIn{
-	background: rgba(255, 255, 255, 0.8);
-    box-shadow: rgb(163, 157, 157) 20px 20px 20px;
-    width: 30%;
-   /*  padding-right: 55px;
-    padding-left: 55px; */
 }
 body {
 	background-color: #d9d9d9;
@@ -258,11 +247,11 @@ h2 {
 }
 /* for containers */
 .container {
-	/* margin: 20px auto; -- To Squeeze top nav bar*/ 
+	margin: 20px auto;
 	/* background-color: #fff; */
 	overflow: hidden;
-	/* border-radius: 4px; */
-	 
+	border-radius: 4px;
+	/* box-shadow: 0 0 10px rgba(0,0,0,0.2), 0 2px 3px rgba(0,0,0,0.4); */
 }
 .container .icon {
 	background-image: url('https://res.cloudinary.com/dw369yzsh/image/upload/v1483213851/icons_wykol9.png');
@@ -277,7 +266,7 @@ h2 {
 .container button {
 	text-transform: uppercase;
 	border: none;
-	background-color: #17a2b8;
+	background-color: #fb6362;
 	color: #fff;
 	margin: 0 auto;
 	display: block;
@@ -442,13 +431,10 @@ button.button-big {
 
 .booking {
 	width: 346px;
-	height: 700px;
-	background-image: url(Background-3.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+	height: 626px;
 }
 .is-sent{
-	/* animation: launch 1s ease-in-out forwards */
+	animation: launch 1s ease-in-out forwards
 } 
 @keyframes launch {
   0% {
@@ -464,10 +450,9 @@ button.button-big {
 }
 .booking .header {
 	width: 100%;
-	height: 30%;
+	height: 185px;
 	background-image: url('https://res.cloudinary.com/dw369yzsh/image/upload/v1483213946/img_booking_ck8dw4.jpg');
 	position: relative;
-	background-repeat: no-repeat;
 	color: #fff;
 }
 .booking .header div {
@@ -506,7 +491,7 @@ button.button-big {
 .booking .input-text .icon {
 	width: 36px;
 	height: 36px;
-	background-color: #17a2b8;
+	background-color: #404a58;
 	border-radius: 2px;
 	background-position: 10px -80px;
 	cursor: pointer;
@@ -547,7 +532,6 @@ button.button-big {
 }
 .booking .persons li:last-child {
 	padding-left: 20px;
-	padding-bottom: 20px;
 }
 .booking .persons label {
 	font-size: 14px;
@@ -589,14 +573,10 @@ button.button-big {
 .booking .button-big {
 	position: relative;
 	padding-left: 20px;
-	
+	margin-top: 40px;
 }
 .booking .button-big .icon {
 	background-position: 0 -150px;
 	position: absolute;
 	left: 59px;
 }
-#map {
-        height: 400px;
-        width: 100%;
-       }
