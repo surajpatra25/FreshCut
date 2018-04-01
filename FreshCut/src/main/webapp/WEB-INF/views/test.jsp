@@ -25,6 +25,8 @@
     <!-- Custom styles for this template -->
     <link href="resources/css/agency.css" rel="stylesheet">
     <link href="resources/css/CommonStyle.css" rel="stylesheet">
+    <script defer
+	src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     
   </head>
 
@@ -41,22 +43,22 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About US</a>
+              <a class="nav-link js-scroll-trigger" href="#about">About US&nbsp;<i class="fab fa-adn"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+              <a class="nav-link js-scroll-trigger" href="#services">Services &nbsp;<i class="fab fa-adn"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="##onlinesignin">Sign UP</a>
+              <a class="nav-link js-scroll-trigger" href="##onlinesignin">Sign UP &nbsp;<i class="fas fa-user-plus"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#onlinecheckin">Check IN</a>
+              <a class="nav-link js-scroll-trigger" href="#onlinecheckin">Check IN &nbsp;<i class="fas fa-check-circle"></i></a>
             </li>
                <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#promotions">Promotions</a>
+              <a class="nav-link js-scroll-trigger" href="#promotions">Promotions &nbsp;<i class="fas fa-cut"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Our Team</a>
+              <a class="nav-link js-scroll-trigger" href="#team">Our Team &nbsp;<i class="fas fa-users"></i></a>
             </li>
           </ul>
         </div>
@@ -68,7 +70,7 @@
       <div class="container">
         <div class="intro-text">
           <div class="intro-lead-in">FreshCut - A Look That Redifines The Idea Of Elegance With A Stroke Of Confidence</div>
-          <div class="intro-heading text-uppercase">A Rebellious Look Worth A Thousand Celebrations. Be Smart! Be Charming!</div>
+         
           <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#onlinecheckin">Online Check-in</a>
         </div>
       </div>
@@ -90,7 +92,7 @@
 			height = 500px
 			width= 100%
 			
-			 data="https://www.youtube.com/watch?v=AejjvwB2eT4"> </object>	
+			 data="https://www.youtube.com/v/tgbNymZ7vqY"> </object>	
               </li>
               <li>
                 <div class="timeline-image">
@@ -322,31 +324,48 @@
                             <input type="submit" value="Register" class="btn btn-info btn-block">
                         </form>
                     </div>
+                    
+                        
                 </div>
+          
             </div>
-        </div>
-    </div>
+           
+             <div id="signIn">
+                        <h3 class="panel-title text-center">Return User Sign In</h3>
+                  
+               <div class="panel-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" name="user name" id="first_name" class="form-control input-sm" placeholder="user name">
+                            </div>
 
-		</div>
-     <div id="#signIn">
-		<form action="login">
-			<table>
+                            <div class="form-group">
+                                <input type="password" name="password" id="last_name" class="form-control input-sm" placeholder="password">
+                            </div>
+
+                            <input type="submit" value="Sign IN" class="btn btn-info btn-block">
+                            
+                            <div>
+                            <table>
 				<tbody>
-					<tr>
-						<td><input type="text" placeholder="user name"><br></td>
-					</tr>
-					<tr>
-						<td><input type="password" placeholder="password"><br></td>
-					</tr>
-					<tr>
-						<td colspan="2"><button>Sign IN</button>
-							</td>
-					</tr>
-					<tr><td>New member ? <a href="#signIn">Click here</a> to sign up.</td></tr>
+                            
+                             	<tr>New member ? <a href="#signIn">Click here</a> to sign up.</tr>
 				</tbody>
 			</table>
-			</form>
-		</div>
+                            </div>
+                        </form>
+                    </div> 
+	
+		</div>  
+             
+             
+        </div>
+        
+         
+    </div>
+
+		
+   
     </section>
 	 <section id="onlinecheckin">
       <div id="onlineCheckInDiv">
@@ -411,8 +430,23 @@
 				<label for="check" class="checkbox">Flexible dates</label>
 			</div>
 		</div> -->
-		
-			<div>
+		<ul class="persons">
+			<li>
+				<label>Location</label>
+				<div class="input-text">
+					<select name="Location">
+						<option value="Lansing">Lansing</option>
+						<div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93816.53479952078!2d-84.62946707704027!3d42.708660213956065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8822c01c7f318c37%3A0x4378b62389029d9e!2sLansing%2C+MI!5e0!3m2!1sen!2sus!4v1522439622110" width="100%" height="60%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+						<option value="Grand Rapids" selected="selected">Grand Rapids</option>
+						 
+					</select>
+					<div class="icon"></div>
+				</div>
+				
+			</li>
+			
+		</ul>
+			<div  >
                                 <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
                             </div>
 			<div>
@@ -423,38 +457,44 @@
                             </div>
 		<ul class="persons">
 			<li>
-				<label>Adults</label>
+				<label>No.Of Guest</label>
 				<div class="input-text">
-					<select name="adults">
+					<select name="No.Of Guest">
 						<option value="1">1</option>
 						<option value="2" selected="selected">2</option>
 						<option value="3">3</option>
 						<option value="4">4</option>   
 					</select>
-					<div class="icon"></div>
+					<div class="icon"> <i class="fas fa-check-circle"></i></div>
 				</div>
 			</li>
-			<li>
-				<label>Children</label>
-				<div class="input-text">
-					<select name="children">
-						<option value="0">0</option>
-						<option value="1" selected="selected">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>   
-					</select>
-					<div class="icon"></div>
-				</div>
-			</li>
+			
 		</ul>
-
-		<button class="button-big" id="search"><div class="icon"></div>Search rooms</button>
+<Div>
+		<button class="button-big" id="search"><div class="icon"></div>Check In</button>
+		</Div>
 	</form>
 	</div>
     </section>
 	
-   
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0G8PsMLyjQ9WmkfwlF1ht0azpTt2gYOw&callback=initMap">
+    </script>
 
     <!-- Team -->
     <section class="bg-light" id="team">
@@ -846,7 +886,7 @@
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <h2 class="text-uppercase">April fool!</h2>
+                  <h2 class="text-uppercase">Project Name</h2>
                   <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                   <img class="img-fluid d-block mx-auto" src="img/portfolio/06-full.jpg" alt="">
                   <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
