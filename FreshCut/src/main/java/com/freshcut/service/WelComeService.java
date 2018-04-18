@@ -1,11 +1,20 @@
 package com.freshcut.service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.freshcut.model.Coupons;
+import com.freshcut.model.OnlineCheckIn;
+import com.freshcut.model.User;
 
 public interface WelComeService {
 
 	ArrayList<Coupons> getCoupons();
+
+	void checkinService(OnlineCheckIn checkIn);
+
+	String getWaitTime(String location);
+
+	String registerUser(User user);
 
 }

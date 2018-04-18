@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,19 +18,19 @@
     <link href="resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="resources/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+   <!--  <link href="resources/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Custom styles for this template -->
     <link href="resources/css/agency.css" rel="stylesheet">
     <link href="resources/css/CommonStyle.css" rel="stylesheet">
-    <script defer
-	src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> -->
     
   </head>
+  
 
   <body id="page-top">
 
@@ -47,10 +48,10 @@
               <a class="nav-link js-scroll-trigger" href="#about">About US&nbsp;<i class="fab fa-adn"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services &nbsp;<i class="fab fa-adn"></i></a>
+              <a class="nav-link js-scroll-trigger" href="#services">Services &nbsp;<i class="fas fa-code-branch"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="##onlinesignin">Sign UP &nbsp;<i class="fas fa-user-plus"></i></a>
+              <a class="nav-link js-scroll-trigger" href="#onlinesignin">Sign UP &nbsp;<i class="fas fa-user-plus"></i></a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#onlinecheckin">Check IN &nbsp;<i class="fas fa-check-circle"></i></a>
@@ -287,135 +288,165 @@
         </div>
       </div>
     </section>
-     <section class="bg-light" id="#onlinesignin">
-     <div class="container" id="container1">
-        <div class="row centered-form">
-            <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title text-center">Please Register</h3>
-                    </div>
-                    <div class="panel-body">
-                        <form role="form">
-                            <div class="form-group">
-                                <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
-                            </div>
+    <!------------------------------------------------- SIGN IN CODES-------------------------------------------- -->
+     <section class="bg-light" id="onlinesignin">
+     <div class="container">
+      <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Sign Up / Sign In</h2>
+            <h3 class="section-subheading text-muted">Login with Social Media or Manually</h3>
+          </div>
+        </div>
+   <div class="main-login main-center">  
+  <form action="/action_page.php">
+    <div class="row centered-form">
+ 
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
 
-                            <div class="form-group">
-                                <input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
-                            </div>
+      <div class="col">
+        <a href="#" class="fb btn">
+          <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+         </a>
+       
+      </div>
+      <fb:login-button   scope="public_profile,email"   onlogin="checkLoginState();"></fb:login-button>
 
-                            <div class="form-group">
-                                <input type="email" name="email" id="email" class="form-control input-sm" placeholder="Email Address">
-                            </div>
+      <div class="col">
+        <div class="hide-md-lg">
+          <p>Or sign in manually:</p>
+        </div>
 
-                            <div class="row">
-                                <div class="col-xs-6 col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
-                                    </div>
-                                </div>
-                                <div class="col-xs-6 col-sm-6 col-md-6">
-                                    <div class="form-group">
-                                        <input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <input type="submit" value="Register" class="btn btn-info btn-block">
-                        </form>
-                    </div>
-                    
-                        
-                </div>
-          
-            </div>
-            <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title text-center">Please Signin</h3>
-                    </div>
-                    <div class="panel-body">
-                        <form role="form">
-                             <div class="form-group">
-                                <input type="text" name="user name" id="first_name" class="form-control input-sm" placeholder="user name">
-                            </div>
-
-                            <div class="form-group">
-                                <input type="password" name="password" id="last_name" class="form-control input-sm" placeholder="password">
-                            </div>
-
-                            <input type="submit" value="Sign IN" class="btn btn-info btn-block">
-                            
-                            <div>
-                            <table>
-				<tbody>
-                            
-                             	<tr>New member ? <a href="#signIn">Click here</a> to sign up.</tr>
-				</tbody>
-			</table>
-                            </div>
-
-                           
-                        </form>
-                    </div>
-                    
-                        
-                </div>
-          
-            </div>
-         </div>
+<div class="form-group">
+						
+							<!-- <label for="name" class="cols-sm-2 control-label">Your Name</label> -->
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="Signup-input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="name" id="name"  placeholder="Enter your Name"/>
+								</div>
+							</div>
+						</div>
+						
+						
+        <div class="form-group">
+							<!-- <label for="password" class="cols-sm-2 control-label">Password</label> -->
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="Signup-input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+								</div>
+							</div>
+						</div>
         
-         
-    </div>
+        <div class="form-group ">
+							 <input type="submit" value="Login">
+						</div>
+       
+      </div>
+      
+    
+  </form>
+ 
+</div>
 
-		
+<div class="bottom-container">
+  <div class="row">
+    <div class="col">
+      <a href="#signupModal" data-toggle="modal" style="color:white" class="btn">Sign up</a>
+    </div>
+    <div class="col">
+      <a href="#" style="color:white" class="btn">Forgot password?</a>
+    </div>
+  </div>
+</div>
+
+	</div>
+	 <!------------------------------------------------- SIGN UP CODE-------------------------------------------- -->  
+	 <div class="portfolio-modal modal fade" id="signupModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="row centered-form">
+				<div class="main-login main-center">
+				
+					<form class="" method="post"  modelAttribute="user" action="register">
+						
+						<div class="form-group">
+							<h1>Sign Up</h1>
+							<!-- <label for="name" class="cols-sm-2 control-label">Your Name</label> -->
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="userName" id="name"  placeholder="Enter your Name"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Your Email</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="userEmail" id="email"  placeholder="Enter your Email"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control"  id="confirm"  placeholder="Confirm your Password"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group ">
+							<button class="button-big" > Register</button>
+						</div>
+						
+					</form>
+				</div>
+        </div>
+      </div>
+    </div>
    
     </section>
+     <!------------------------------------------------- ONLINE CHECKIN CODES-------------------------------------------- -->  
 	 <section id="onlinecheckin">
-      <div id="onlineCheckInDiv">
-		<div id="overlay"></div>
-	<div class="container calendar">
-		<div class="header">
-			<div class="icon arr prev"></div>
-			<div class="month">May 2014</div>
-			<div class="icon arr next"></div>
-		</div>
-		<table>
-			<tr>
-				<th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
-			</tr>
-			<tr>
-				<td class="notCurMonth">29</td><td class="notCurMonth">30</td>
-				<td>1</td><td>2</td><td class="curDay">3</td><td>4</td><td>5</td>
-			</tr>
-			<tr>
-				<td>6</td><td class="holiday">7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
-			</tr>
-			<tr>
-				<td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
-			</tr>
-			<tr>
-				<td>20</td><td>21</td><td>22</td><td class="holiday">23</td><td>24</td><td>25</td><td>26</td>
-			</tr>
-			<tr>
-				<td>27</td><td>28</td><td>29</td><td>30</td>
-				<td class="notCurMonth">1</td><td class="notCurMonth">2</td class="notCurMonth"><td class="notCurMonth">3</td>
-			</tr>
-		</table>
-		<button class="button-big" id="add_event">Add event</button>
-	</div>
-
-
-	<form action="" class="container booking" name="booking">
-		<div class="header">
+	 <form:form action="checkin" class="container booking"  method="post"  modelAttribute="onlineCheckIn">
+      <div class="container">
+		 <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Check In</h2>
+            <h3 class="section-subheading text-muted">Guest Check In Through Web</h3>
+          </div>
+        </div>
+	
+		<!-- <div class="header">
 			<div>
 				<h2>Fresh cut</h2>
 				<div class="icon"></div>
 				<p>LA, California</p>
 			</div>
-		</div>
-		
+		</div>	 -->	
 		<!-- <div class="dates" data-type="none">
 			<label for="checkin">Check in</label>
 			<div class="input-text">
@@ -435,36 +466,55 @@
 				<label for="check" class="checkbox">Flexible dates</label>
 			</div>
 		</div> -->
+		
+  <!--   <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script> -->
+    <!-- <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR3VMCpTIS1m9V3zLihXras05DCd5_YP4&callback=initMap">
+    </script> -->
+    <div>
+    <div class="location1">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2930.975063823866!2d-84.64607004954905!3d42.72541851984117!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8822bfcc3e4e99d9%3A0x306f569cc30933e6!2s6465+Millennium+Dr%2C+Lansing%2C+MI+48917!5e0!3m2!1sen!2sus!4v1523813584128" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+   
+    </div>
+    <div class="location2">
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.8681480754376!2d-85.68773688452256!3d43.02316237914799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8819a95634614f4d%3A0x6cb8394736913155!2s3274+Weatherford+Dr+NW%2C+Walker%2C+MI+49544!5e0!3m2!1sen!2sus!4v1523813468490" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    
+    </div>
+    </div>
+  		<div class="selection">	 
 		<ul class="persons">
 			<li>
-				<label>Location</label>
-				<div class="input-text">
-					<select name="Location">
-						<option value="Lansing">Lansing</option>
-						<div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93816.53479952078!2d-84.62946707704027!3d42.708660213956065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8822c01c7f318c37%3A0x4378b62389029d9e!2sLansing%2C+MI!5e0!3m2!1sen!2sus!4v1522439622110" width="100%" height="60%" frameborder="0" style="border:0" allowfullscreen></iframe></div>
-						<option value="Grand Rapids" selected="selected">Grand Rapids</option>
-						 
+				<label id="waittime">Wait time for Lansing ${waittime} minutes</label>
+				<div class="input-text location-select">
+					<select name="location">
+						<option value="lansing" selected="selected">Lansing</option>
+						<option value="grand rapids" >Grand Rapids</option>
+						
 					</select>
-					<div class="icon"></div>
+					<div class="icon"> <i class="fas fa-check-circle"></i></div>
 				</div>
-				
 			</li>
 			
 		</ul>
-			<div  >
-                                <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
-                            </div>
-			<div>
-                                <input type="text" name="email" id="email" class="form-control input-sm" placeholder="email">
-                            </div>
-            <div>
-                                <input type="text" name="phone_number" id="phone_number" class="form-control input-sm" placeholder="Phone number">
-                            </div>
+		
 		<ul class="persons">
 			<li>
 				<label>No.Of Guest</label>
 				<div class="input-text">
-					<select name="No.Of Guest">
+					<select name="numberOfGuests">
 						<option value="1">1</option>
 						<option value="2" selected="selected">2</option>
 						<option value="3">3</option>
@@ -474,32 +524,26 @@
 				</div>
 			</li>
 			
-		</ul>
-<Div>
-		<button class="button-big" id="search"><i class="fa fa-check"></i>Check In</button>
-		</Div>
-	</form>
+		</ul>		
+			</div>
+			<div  >
+                                <form:input type="text" path="firstName" id="first_name" class="form-control input-sm" placeholder="First Name" />
+                            </div>
+			<div>
+                                <input type="text" name="emailID" id="email" class="form-control input-sm" placeholder="email">
+                            </div>
+            <div>
+                                <input type="text" name="phoneNumber" id="phone_number" class="form-control input-sm" placeholder="Phone number">
+                            </div>
+		
+<div>
+		<button class="button-big" id="search"><i class="fa fa-check"></i> Check In</button>
+		</div>
+	
 	</div>
+	</form:form>
     </section>
 	
-    <h3>My Google Maps Demo</h3>
-    <div id="map"></div>
-    <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0G8PsMLyjQ9WmkfwlF1ht0azpTt2gYOw&callback=initMap">
-    </script>
 
     <!-- Team -->
     <section class="bg-light" id="team">
@@ -926,6 +970,8 @@
     <script src="resources/js/agency.min.js"></script>
     <script type="text/javascript">
 	$(document).ready(function(){
+		$(".location2").hide();
+		
  $('.pop-up').on('click', function(){
  	$('#overlay').fadeIn(300); 
  	$('.calendar').fadeIn(300); 
@@ -949,12 +995,53 @@ $('#add_event').on('click', function(){
  	$('#' + id).val(value+" May, 2014");
 }); 
 
-$('#search').on('click', function(e){
+/* $('#search').on('click', function(e){
 	$('.booking').addClass('is-sent');
 	e.preventDefault();
-});
+}); */
+$(".location-select").change(function(){
+	var val= $(".location-select option:selected").val(); 
+	if(val=="lansing"){
+		$(".location1").show();
+		$(".location2").hide();
+	}
+	if(val=="grand rapids"){
+		$(".location2").show();
+		$(".location1").hide();
+	}
+	$.ajax({
+		url: "waittime", 
+		data:{
+	          location: val,
+	        },
+		success: function(result){
+        	$("#waittime").html("Wait time for "+val+" "+result+" minutes");
+    	}});
+	console.log(val);
+	});
 });	
 	</script>
+<!-- 	<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '2041768999412707',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.12'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script> -->
   </body>
 
 </html>

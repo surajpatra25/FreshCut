@@ -1,153 +1,209 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
- 
-<style>
-.btn-green {
-  background-color: #1ab394;
-  color: #fff;
-  border-radius: 3px;
-  
-  &:hover, &:focus {
-    background-color: #18a689;
-    color: #fff;
-  }
-}
+    <meta charset="utf-8" />
+   <title>Ubercut Survey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-.bar-green {
-  background-color: #1ab394;
-  color: #fff;
-  padding-left: 10px;
-}
+    <link rel="stylesheet" type="text/css" href="resources/Survey/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/Survey/font-awesome/css/font-awesome.min.css" />
 
-.panel-footer {
-    text-align: right;
-    background-color: #fff;
-}
-</style>
-<script type="text/javascript">
-
-
-var json = {
-    title: "Product Feedback Survey Example",
-    showProgressBar: "top",
-    pages: [{
-        questions: [{
-            type: "matrix",
-            name: "Quality",
-            title: "Please indicate if you agree or disagree with the following statements",
-            columns: [{
-                value: 1,
-                text: "Strongly Disagree"
-            }, {
-                value: 2,
-                text: "Disagree"
-            }, {
-                value: 3,
-                text: "Neutral"
-            }, {
-                value: 4,
-                text: "Agree"
-            }, {
-                value: 5,
-                text: "Strongly Agree"
-            }],
-            rows: [{
-                value: "affordable",
-                text: "Product is affordable"
-            }, {
-                value: "does what it claims",
-                text: "Product does what it claims"
-            }, {
-                value: "better then others",
-                text: "Product is better than other products on the market"
-            }, {
-                value: "easy to use",
-                text: "Product is easy to use"
-            }]
-        }]
-    }, {
-    	questions: [{
-          type: "checkbox",
-          name: "words",
-          title: "Which of the words would you use to describe our products?",
-          isRequired: true,
-          colCount: 2,
-          choices: ["Reliable", "High quality", "Useful", "Unique", "Good", "Overpriced", "Impractical", "Ineffective", "Poor quality", "Unreliable", "Not for me"]
-      }]
-    }, {
-        questions: [{
-            type: "rating",
-            name: "satisfaction",
-            title: "How satisfied are you with the Product?",
-            mininumRateDescription: "Not Satisfied",
-            maximumRateDescription: "Completely satisfied"
-        }, {
-            type: "rating",
-            name: "recommend friends",
-            visibleIf: "{satisfaction} > 3",
-            title: "How likely are you to recommend the Product to a friend or co-worker?",
-            mininumRateDescription: "Will not recommend",
-            maximumRateDescription: "I will recommend"
-        }, {
-            type: "comment",
-            name: "suggestions",
-            title: "What would make you more satisfied with the Product?",
-        }]
-    }, {
-        questions: [{
-            type: "radiogroup",
-            name: "price to competitors",
-            title: "Compared to our competitors, do you feel the Product is",
-            choices: ["Less expensive", "Priced about the same", "More expensive", "Not sure"]
-        }, {
-            type: "radiogroup",
-            name: "price",
-            title: "Do you feel our current price is merited by our product?",
-            choices: ["correct|Yes, the price is about right",
-                "low|No, the price is too low for your product",
-                "high|No, the price is too high for your product"
-            ]
-        }]
-    }, {
-        questions: [{
-            type: "multipletext",
-            name: "pricelimit",
-            title: "What is the... ",
-            items: [{
-                name: "mostamount",
-                title: "The maximum amount you would ever pay for a product like ours"
-            }, {
-                name: "leastamount",
-                title: "The minimum amount you would feel comfortable paying"
-            }]
-        }, {
-            type: "text",
-            name: "email",
-            title: "Thank you for taking our survey. Your survey is almost complete, please enter your email address in the box below if you wish to participate in our drawing, then press the 'Submit' button."
-        }]
-    }]
-};
-
-
-
-var survey = new Survey.Model(json);
-Survey.defaultBootstrapMaterialCss.navigationButton = "btn btn-green";
-Survey.defaultBootstrapMaterialCss.rating.item = "btn btn-default my-rating";
-Survey.Survey.cssType = "bootstrapmaterial";
-survey.onComplete.add(function(result) {
-	document.querySelector('#result').innerHTML = "result: " + JSON.stringify(result.data);
-});
-</script>
+    <script type="text/javascript" src="resources/Survey/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="resources/Survey/bootstrap/js/bootstrap.min.js"></script>
+    
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
 <body>
-	<div id="surveyElement"></div>
 
-	<div id="result"></div>
+<div class="container">    
+
+<div class="page-header">
+    <h1>UberCut <small>Ubercut Feedback</small></h1>
+</div>
+
+<!-- Contact Form - START -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="well well-sm">
+                <form class="form-horizontal" method="post">
+                    <fieldset>
+                        <legend class="text-center header">Feedback</legend>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="fname" name="name" type="text" placeholder="First Name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="lname" name="name" type="text" placeholder="Last Name" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="email" name="email" type="text" placeholder="Email Address" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
+                            <div class="col-md-8">
+                                <input id="phone" name="phone" type="text" placeholder="Phone" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                            <div class="col-md-8">
+                                <textarea class="form-control" id="message" name="message" placeholder="Enter your massage for us here. We will get back to you within 2 business days." rows="7"></textarea>
+                            </div>
+                        </div>
+
+<div class="feedback">
+
+<h2 class="text-feedback headerfeedback">Was the store clean</h2>
+<label class="container1">Strongly Agree  <input type="radio" name="radio" ><span class="checkmark"></span></label>
+<label class="container1"> Agree          <input type="radio" name="radio" ><span class="checkmark"></span></label>
+<label class="container1">Somewhat Agree  <input type="radio" name="radio" ><span class="checkmark"></span></label>
+<label class="container1">Disagree        <input type="radio" name="radio" ><span class="checkmark"></span></label>
+
+<h2 class="text-feedback headerfeedback">Was the store clean</h2>
+<label class="container1">Strongly Agree <input type="radio" name="radio1" ><span class="checkmark"></span></label>
+<label class="container1"> Agree         <input type="radio" name="radio1" ><span class="checkmark"></span></label>
+<label class="container1">Somewhat Agree <input type="radio" name="radio1" ><span class="checkmark"></span></label>
+<label class="container1">Disagree       <input type="radio" name="radio1" ><span class="checkmark"></span></label>
+
+<h2 class="text-feedback headerfeedback">Was the store clean</h2>
+<label class="container1">Strongly Agree <input type="radio" name="radio2" ><span class="checkmark"></span></label>
+<label class="container1"> Agree         <input type="radio" name="radio2" ><span class="checkmark"></span></label>
+<label class="container1">Somewhat Agree <input type="radio" name="radio2" ><span class="checkmark"></span></label>
+<label class="container1">Disagree       <input type="radio" name="radio2" ><span class="checkmark"></span></label>
+
+<h2 class="text-feedback headerfeedback">Was the store clean</h2>
+<label class="container1">Strongly Agree <input type="radio" name="radio3" ><span class="checkmark"></span></label>
+<label class="container1"> Agree         <input type="radio" name="radio3" ><span class="checkmark"></span></label>
+<label class="container1">Somewhat Agree <input type="radio" name="radio3" ><span class="checkmark"></span></label>
+<label class="container1">Disagree       <input type="radio" name="radio3" ><span class="checkmark"></span></label>
+
+
+
+
+</div>
+</body>
+
+               <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .header {
+        color: #36A0FF;
+        font-size: 27px;
+        padding: 10px;
+    }
+    
+     .headerfeedback {
+        color: #36A0FF;
+        font-size: 15px;
+        
+    }
+    
+
+    .bigicon {
+        font-size: 35px;
+        color: #36A0FF;
+    }
+    
+    /***********Service ****************/
+.feedback{
+ -webkit-margin-start: 20%;
+    position: relative;
+        font-size: 1.5em;
+}
+/* The container */
+.container1 {
+
+   /*  display: block; */
+    position: relative;
+    padding-left: 35px;
+   /*  margin-bottom: 12px; */
+    cursor: pointer;
+    font-size: 12px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container1 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container1:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container1 input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container1 input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container1 .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+</style>
+
+<!-- Contact Form - END -->
+
+</div>
 
 </body>
 </html>

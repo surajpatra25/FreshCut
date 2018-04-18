@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.freshcut.bean.LoginFormBean;
+import com.freshcut.model.OnlineCheckIn;
+import com.freshcut.model.User;
 
 @Controller
 public class LoginController {
@@ -22,4 +24,5 @@ public class LoginController {
 		ModelAndView mv = new ModelAndView("signup");
 		return mv;
 	}
+	
 }

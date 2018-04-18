@@ -16,7 +16,7 @@
         http://www.springframework.org/schema/util
         http://www.springframework.org/schema/util/spring-util.xsd">
 
- 	<context:property-placeholder location="classpath:resources/Application.properties" />
+ 	<context:property-placeholder location="classpath:Application.properties" />
 	<context:component-scan base-package="com.cnsi.fms" />
 	<context:annotation-config />
 	<tx:annotation-driven transaction-manager="hibernateTransactionManager"/>
@@ -24,12 +24,12 @@
 	<bean id="properties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
 	    <property name="locations">
 	        <list>
-	        	<value>classpath:resources/app.properties</value>
+	        	<value>classpath:app.properties</value>
 	        </list>
 	    </property>
 	</bean>
 	
-	<util:properties id="props" location="classpath:resources/messages.properties "/>
+	<util:properties id="props" location="classpath:messages.properties "/>
  	
 	<context:component-scan base-package="com.freshcut.controller" />
 	<context:component-scan base-package="com.freshcut.service" />

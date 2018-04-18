@@ -43,16 +43,6 @@ public class User implements Serializable {
 	@Column(name="OPRTNL_FLAG")
 	private String operational;
 	
-	public String getEmployeeID() {
-		return employeeID;
-	}
-
-	public void setEmployeeID(String employeeID) {
-		this.employeeID = employeeID;
-	}
-
-	@Column(name="EMPLOYEE_ID")
-	private String employeeID;
 	
 	public String getOperational() {
 		return operational;
