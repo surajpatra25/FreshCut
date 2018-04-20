@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+	<link rel="shortcut icon" href="resources/img/ubercuts_logo.png" />
     <title>FreshCut</title>
 
     <!-- Bootstrap core CSS -->
@@ -37,7 +37,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">FreshCut</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"> <img class="img-fluid" src="resources/img/ubercuts_logo.png" alt="" width="5%" height="5%">FreshCut</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -45,7 +45,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About US&nbsp;<i class="fab fa-adn"></i></a>
+              <a class="nav-link js-scroll-trigger" href="#about">About US&nbsp;<i class="fa fa-adn"></i></a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#services">Services &nbsp;<i class="fas fa-code-branch"></i></a>
@@ -98,7 +98,7 @@
               </li>
               <li>
                 <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
+                  <img class="rounded-circle img-fluid" src="resources/img/about/1.jpg" alt="">
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -351,16 +351,19 @@
  
 </div>
 
-<div class="bottom-container">
-  <div class="row">
-    <div class="col">
+ <div class="bottom-container">
+ <div class="row">
+    <div class="Signupcol">
       <a href="#signupModal" data-toggle="modal" style="color:white" class="btn">Sign up</a>
     </div>
-    <div class="col">
+    <div class="Signupcol">
       <a href="#" style="color:white" class="btn">Forgot password?</a>
     </div>
-  </div>
-</div>
+  </div>  
+    
+ 
+   </div> 
+</div> 
 
 	</div>
 	 <!------------------------------------------------- SIGN UP CODE-------------------------------------------- -->  
@@ -382,37 +385,37 @@
 							<!-- <label for="name" class="cols-sm-2 control-label">Your Name</label> -->
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<span class="Signup-input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
 									<input type="text" class="form-control" name="userName" id="name"  placeholder="Enter your Name"/>
 								</div>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="email" class="cols-sm-2 control-label">Your Email</label>
+							<!-- <label for="email" class="cols-sm-2 control-label">Your Email</label> -->
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<span class="Signup-input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
 									<input type="text" class="form-control" name="userEmail" id="email"  placeholder="Enter your Email"/>
 								</div>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="password" class="cols-sm-2 control-label">Password</label>
+							<!-- <label for="password" class="cols-sm-2 control-label">Password</label> -->
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<span class="Signup-input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
 									<input type="password" class="form-control" name="password" id="password"  placeholder="Enter your Password"/>
 								</div>
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label for="confirm" class="cols-sm-2 control-label">Confirm Password</label>
+							<!-- <label for="confirm" class="cols-sm-2 control-label">Confirm Password</label> -->
 							<div class="cols-sm-10">
 								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<span class="Signup-input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
 									<input type="password" class="form-control"  id="confirm"  placeholder="Confirm your Password"/>
 								</div>
 							</div>

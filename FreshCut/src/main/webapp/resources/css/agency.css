@@ -103,7 +103,7 @@ img::-moz-selection {
 }
 
 #mainNav {
-  background-color: #212529;
+  background-color: #415a65;;
   
 }
 
@@ -166,7 +166,7 @@ img::-moz-selection {
   #mainNav.navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
-    background-color: #212529;
+    background-color: #415a65;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
