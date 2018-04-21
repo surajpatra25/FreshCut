@@ -15,6 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.freshcut.model.Coupons;
 import com.freshcut.model.OnlineCheckIn;
+import com.freshcut.model.Survey;
 import com.freshcut.model.User;
 import com.freshcut.service.WelComeService;
  
@@ -109,4 +110,16 @@ public class HelloWorldController {
 		return mv;
 	}
 	
+	@RequestMapping("/saveSurvey")
+	public ModelAndView saveSurvey(@ModelAttribute("survey") Survey survey) {
+		System.out.println("in check in controller");
+ 
+		ModelAndView mv = new ModelAndView("checkin");
+		
+        welcomeService.saveSurveyService(survey);
+	
+		
+		mv.addObject("message", msg);
+		return mv;
+	}
 }

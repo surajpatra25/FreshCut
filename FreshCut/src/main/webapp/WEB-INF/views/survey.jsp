@@ -28,14 +28,14 @@
     <div class="row">
         <div class="col-md-12">
             <div class="well well-sm">
-                <form class="form-horizontal" method="post">
+                <form class="form-horizontal" method="post" modelAttribute="survey" action="saveSurvey">
                     <fieldset>
                         <legend class="text-center header">Feedback</legend>
 
                         <div class="form-group">
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                             <div class="col-md-8">
-                                <input id="fname" name="name" type="text" placeholder="First Name" class="form-control">
+                                <input id="fname" name="firstName" type="text" placeholder="First Name" class="form-control">
                             </div>
                         </div>
                         <div class="form-group">

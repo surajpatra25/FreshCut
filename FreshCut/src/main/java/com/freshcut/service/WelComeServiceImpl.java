@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.freshcut.dao.WelcomeDao;
 import com.freshcut.model.Coupons;
 import com.freshcut.model.OnlineCheckIn;
+import com.freshcut.model.Survey;
 import com.freshcut.model.User;
 @Service
 public class WelComeServiceImpl implements WelComeService{
@@ -39,4 +40,11 @@ public class WelComeServiceImpl implements WelComeService{
 	public String registerUser(User user) {
 		return welcomeDao.registerUserDao(user);
 	}
+
+	@Override
+	public void saveSurveyService(Survey survey) {
+		
+		welcomeDao.saveSurveyDao(survey);
+	}
+	
 }

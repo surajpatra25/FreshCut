@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.freshcut.model.Coupons;
 import com.freshcut.model.OnlineCheckIn;
+import com.freshcut.model.Survey;
 import com.freshcut.model.User;
 
 import antlr.collections.List;
@@ -87,5 +88,12 @@ public class WelComeDaoImpl implements WelcomeDao{
 		sessionFactory.getCurrentSession().save(user);
 		
 		return "success";
+	}
+
+
+	@Override
+	public void saveSurveyDao(Survey survey) {
+		sessionFactory.getCurrentSession().save(survey);
+		
 	}
 }
