@@ -51,10 +51,12 @@ public class HelloWorldController {
  
 		ModelAndView mv = new ModelAndView("test");
 		List<Coupons> coupons = new ArrayList<Coupons>();
+		List<Services> services = new ArrayList<Services>();
         coupons = welcomeService.getCoupons();
-	
+        services = welcomeService.getServices();
 		mv.addObject("coupons", coupons);
-		mv.addObject("message", msg);
+		mv.addObject("services", services);
+		mv.addObject("message", msg);		
 		mv.addObject("onlineCheckIn", new OnlineCheckIn());
 		String waittime = welcomeService.getWaitTime("lansing");
 		mv.addObject("waittime", waittime);
@@ -75,6 +77,20 @@ public class HelloWorldController {
 		
 		return mv;
 	}
+	
+	//@RequestMapping("/services")
+	public ModelAndView services(@ModelAttribute("services") Services services){
+		System.out.println("in check in controller");
+ 
+		ModelAndView mv = new ModelAndView("s");
+		
+        //welcomeService.allServices(services);
+		
+		mv.addObject("message", msg);
+		return mv;
+	}
+
+	
 	@RequestMapping("/map")
 	public ModelAndView showMap(
 			@RequestParam(value = "name", required = false, defaultValue = "World") String fName) {
@@ -122,4 +138,5 @@ public class HelloWorldController {
 		mv.addObject("message", msg);
 		return mv;
 	}
+	
 }

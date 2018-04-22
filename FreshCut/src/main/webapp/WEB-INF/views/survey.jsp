@@ -41,14 +41,14 @@
                         <div class="form-group">
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
                             <div class="col-md-8">
-                                <input id="lname" name="name" type="text" placeholder="Last Name" class="form-control">
+                                <input id="lname" name="lastName" type="text" placeholder="Last Name" class="form-control">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
                             <div class="col-md-8">
-                                <input id="email" name="email" type="text" placeholder="Email Address" class="form-control">
+                                <input id="email" name="emailAddres" type="text" placeholder="Email Address" class="form-control">
                             </div>
                         </div>
 
@@ -57,41 +57,46 @@
                             <div class="col-md-8">
                                 <input id="phone" name="phone" type="text" placeholder="Phone" class="form-control">
                             </div>
-                        </div>
+                       </div>
 
                         <div class="form-group">
                             <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
                             <div class="col-md-8">
-                                <textarea class="form-control" id="message" name="message" placeholder="Enter your massage for us here. We will get back to you within 2 business days." rows="7"></textarea>
+                                <textarea class="form-control" id="message" name="customerNote" placeholder="Enter your massage for us here. We will get back to you within 2 business days." rows="7"></textarea>
                             </div>
                         </div>
-
+                        
 <div class="feedback">
 
-<h2 class="text-feedback headerfeedback">Was the store clean</h2>
+<h2 class="text-feedback headerfeedback">question1</h2>
 <label class="container1">Strongly Agree  <input type="radio" name="radio" ><span class="checkmark"></span></label>
 <label class="container1"> Agree          <input type="radio" name="radio" ><span class="checkmark"></span></label>
 <label class="container1">Somewhat Agree  <input type="radio" name="radio" ><span class="checkmark"></span></label>
 <label class="container1">Disagree        <input type="radio" name="radio" ><span class="checkmark"></span></label>
 
-<h2 class="text-feedback headerfeedback">Was the store clean</h2>
+<h2 class="text-feedback headerfeedback">question2</h2>
 <label class="container1">Strongly Agree <input type="radio" name="radio1" ><span class="checkmark"></span></label>
 <label class="container1"> Agree         <input type="radio" name="radio1" ><span class="checkmark"></span></label>
 <label class="container1">Somewhat Agree <input type="radio" name="radio1" ><span class="checkmark"></span></label>
 <label class="container1">Disagree       <input type="radio" name="radio1" ><span class="checkmark"></span></label>
 
-<h2 class="text-feedback headerfeedback">Was the store clean</h2>
+<h2 class="text-feedback headerfeedback">question3</h2>
 <label class="container1">Strongly Agree <input type="radio" name="radio2" ><span class="checkmark"></span></label>
 <label class="container1"> Agree         <input type="radio" name="radio2" ><span class="checkmark"></span></label>
 <label class="container1">Somewhat Agree <input type="radio" name="radio2" ><span class="checkmark"></span></label>
 <label class="container1">Disagree       <input type="radio" name="radio2" ><span class="checkmark"></span></label>
 
-<h2 class="text-feedback headerfeedback">Was the store clean</h2>
+<h2 class="text-feedback headerfeedback">question4</h2>
 <label class="container1">Strongly Agree <input type="radio" name="radio3" ><span class="checkmark"></span></label>
 <label class="container1"> Agree         <input type="radio" name="radio3" ><span class="checkmark"></span></label>
 <label class="container1">Somewhat Agree <input type="radio" name="radio3" ><span class="checkmark"></span></label>
 <label class="container1">Disagree       <input type="radio" name="radio3" ><span class="checkmark"></span></label>
 
+<h2 class="text-feedback headerfeedback">question5</h2>
+<label class="container1">Strongly Agree <input type="radio" name="radio3" ><span class="checkmark"></span></label>
+<label class="container1"> Agree         <input type="radio" name="radio3" ><span class="checkmark"></span></label>
+<label class="container1">Somewhat Agree <input type="radio" name="radio3" ><span class="checkmark"></span></label>
+<label class="container1">Disagree       <input type="radio" name="radio3" ><span class="checkmark"></span></label>
 
 
 

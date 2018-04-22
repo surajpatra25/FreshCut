@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.freshcut.controller.Services;
 import com.freshcut.dao.WelcomeDao;
 import com.freshcut.model.Coupons;
 import com.freshcut.model.OnlineCheckIn;
@@ -46,5 +47,13 @@ public class WelComeServiceImpl implements WelComeService{
 		
 		welcomeDao.saveSurveyDao(survey);
 	}
+
+	@Override
+	public ArrayList<Services> getServices() {
+		// TODO Auto-generated method stub
+		return welcomeDao.getServices();
+	}
+	
+	
 	
 }
