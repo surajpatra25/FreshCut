@@ -3,7 +3,7 @@ package com.freshcut.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.freshcut.controller.Services;
+//import com.freshcut.controller.Services;
 import com.freshcut.model.Coupons;
 import com.freshcut.model.OnlineCheckIn;
 import com.freshcut.model.Survey;
@@ -21,7 +21,7 @@ public interface WelComeService {
 
 	void saveSurveyService(Survey survey);
 
-	ArrayList<Services> getServices();
+	//ArrayList<Services> getServices();
 
 
 

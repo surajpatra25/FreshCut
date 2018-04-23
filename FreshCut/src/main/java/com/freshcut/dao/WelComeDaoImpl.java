@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.freshcut.controller.Services;
+//import com.freshcut.controller.Services;
 import com.freshcut.model.Coupons;
 import com.freshcut.model.OnlineCheckIn;
 import com.freshcut.model.Survey;
@@ -36,11 +36,11 @@ public class WelComeDaoImpl implements WelcomeDao{
 	}
 
 	@SuppressWarnings("unchecked")
-	@Override
+	/*@Override
 	public ArrayList<Services> getServices() {
 		return (ArrayList<Services>) sessionFactory.getCurrentSession().createCriteria(Services.class).add(Restrictions.eq("active", "A")).list(); 
 		
-	}
+	}*/
 
 	@Override
 	public int checkInDao(String location) {

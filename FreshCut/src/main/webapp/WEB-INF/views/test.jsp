@@ -48,19 +48,19 @@
               <a class="nav-link js-scroll-trigger" href="#about">About US&nbsp;<i class="fa fa-adn"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services &nbsp;<i class="fas fa-code-branch"></i></a>
+              <a class="nav-link js-scroll-trigger" href="#services">Services &nbsp;<i class="fa fa-code-branch"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#onlinesignin">Sign UP &nbsp;<i class="fas fa-user-plus"></i></a>
+              <a class="nav-link js-scroll-trigger" href="#onlinesignin">Sign UP &nbsp;<i class="fa fa-user-plus"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#onlinecheckin">Check IN &nbsp;<i class="fas fa-check-circle"></i></a>
+              <a class="nav-link js-scroll-trigger" href="#onlinecheckin">Check IN &nbsp;<i class="fa fa-check-circle"></i></a>
             </li>
                <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#promotions">Promotions &nbsp;<i class="fas fa-cut"></i></a>
+              <a class="nav-link js-scroll-trigger" href="#promotions">Promotions &nbsp;<i class="fa fa-cut"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Our Team &nbsp;<i class="fas fa-users"></i></a>
+              <a class="nav-link js-scroll-trigger" href="#team">Our Team &nbsp;<i class="fa fa-users"></i></a>
             </li>
           </ul>
         </div>
@@ -293,7 +293,7 @@
      <div class="container">
       <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Sign Up / Sign In</h2>
+            <h2 class="section-heading text-uppercase">Log In</h2>
             <h3 class="section-subheading text-muted">Login with Social Media or Manually</h3>
           </div>
         </div>
